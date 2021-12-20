@@ -7,26 +7,35 @@
     <title>phpSnack1</title>
 
     <?php
-        $partite = [
+        $teams = [
             [
-                'Olimpia Milano' => '55',
-                'Cantù' => '60'
+                'home' => 'Olimpia Milano',
+                'homePoint' => 55,
+                'external' => 'Cantù',
+                'extPoint' => 60
             ],
-            [
-                'Virtus Bologna' => '35',
-                'Dinamo' => '50'
-            ],
-            [
-                'Alianz Trieste' => '55',
-                'New Basket Brindisi' => '40'
-            ],
+            // [
+            //     'home' => 'Olimpia Milano',
+            //     'homePoint' => 45,
+            //     'external' => 'Cantù',
+            //     'extPoint' => 50
+            // ],
+            // [
+            //     'home' => 'Olimpia Milano',
+            //     'homePoint' => 35,
+            //     'external' => 'Cantù',
+            //     'extPoint' => 30
+            // ]
         ];
     ?>
 </head>
 <body>
     <p>
         <?php
-            var_dump($partite);
+            for($x=0; $x < count($teams); $x++) {
+
+                echo $teams[0]['home'] . ' : ' . $teams[0]['homePoint'] . '<br>' . $teams[0]['external'] . ' : ' . $teams[0]['extPoint'] . '<br>';
+            }
         ?>
     </p>
 </body>
