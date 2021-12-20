@@ -29,6 +29,11 @@
                 ]
             ]
         ];
+
+        for ($x=0; $x<count($posts); $x++) {
+            // echo array_keys($posts);
+            echo $posts['10/01/2021'][$x]['title']. '<br>' . $posts['10/01/2021'][$x]['author']. '<br>' . $posts['10/01/2021'][$x]['text']. '<br>';
+        }
     ?>
 </body>
 </html>
