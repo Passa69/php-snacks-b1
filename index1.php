@@ -14,18 +14,18 @@
                 'external' => 'Cantù',
                 'extPoint' => 60
             ],
-            // [
-            //     'home' => 'Olimpia Milano',
-            //     'homePoint' => 45,
-            //     'external' => 'Cantù',
-            //     'extPoint' => 50
-            // ],
-            // [
-            //     'home' => 'Olimpia Milano',
-            //     'homePoint' => 35,
-            //     'external' => 'Cantù',
-            //     'extPoint' => 30
-            // ]
+            [
+                'home' => 'Virtus Bologna',
+                'homePoint' => 45,
+                'external' => 'Dinamo',
+                'extPoint' => 50
+            ],
+            [
+                'home' => 'New Basket Brindisi',
+                'homePoint' => 35,
+                'external' => 'Alianz Trieste',
+                'extPoint' => 30
+            ]
         ];
     ?>
 </head>
@@ -34,7 +34,7 @@
         <?php
             for($x=0; $x < count($teams); $x++) {
 
-                echo $teams[0]['home'] . ' : ' . $teams[0]['homePoint'] . '<br>' . $teams[0]['external'] . ' : ' . $teams[0]['extPoint'] . '<br>';
+                echo $teams[$x]['home'] . ' : ' . $teams[$x]['homePoint'] . '<br>' . $teams[$x]['external'] . ' : ' . $teams[$x]['extPoint'] . '<br>';
             }
         ?>
     </p>
