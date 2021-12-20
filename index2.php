@@ -12,14 +12,16 @@
         $mail = $_GET['mail'];
         $age = $_GET['age'];
 
-        // variabile name
+        // variabili name
         $lenght = strlen($name);
         // variabili mail
         $hasAt = strpos($mail, '@');
         $hasDot = strpos($mail, '.');
         $mailOk =  $hasAt != false && $hasDot != false;
+        // variabili age
+        $number = is_numeric($age);
 
-        if ($lenght > 3 && $mailOk) {
+        if ($lenght > 3 && $mailOk && $number) {
 
             echo '<p>Accesso Riuscito</p>';
         } else {
