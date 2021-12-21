@@ -49,15 +49,18 @@
 
         $keys = array_keys($posts);
         for ($x=0; $x<count($keys); $x++) {
-            $key = $keys[$x];
-            $postsByKey = $posts[$key];
-            for ($i=0; $i<$postsByKey; $i++) {
-                $value1 = $posts[$key][$i]['title'];
-                // $value2 = $posts[$key][$i]['author'];
-                // $value3 = $posts[$key][$i]['text'];
-            };
 
-            echo $key . '<br>' . $value1 . '<br>';
+            $key = $keys[$x];
+            echo '<h3>' . $key . '</h3>';
+
+            $postsByKey = $posts[$key];
+            for ($y=0; $y<count($postsByKey); $y++) {
+
+                $post = $postsByKey[$y];
+                echo '<p>' . $post['title'] . '</p>'
+                    . $post['author'] . '<br>'
+                    . $post['text'] . '<br>';
+            }
         }
     ?>
 </body>
